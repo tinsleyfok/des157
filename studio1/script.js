@@ -6,7 +6,7 @@ console.log("this is a js comment");
 
 var barWidth = 20;
 var lastBar = -1;
- var max_distance;
+var max_distance;
 
 function setup() {
     createCanvas(800, 250);
