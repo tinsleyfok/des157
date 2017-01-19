@@ -6,31 +6,30 @@ console.log("this is a js comment");
 
 var barWidth = 20;
 var lastBar = -1;
- var max_distance;
+var max_distance;
 
 function setup() {
-  createCanvas(800, 250);
+    createCanvas(800, 250);
     background(50);
-  noStroke()
-  colorMode(HSB, width, height, 100); 
-  max_distance = dist(0, 0, width, height);
+    noStroke()
+    colorMode(HSB, width, height, 100);
+    max_distance = dist(0, 0, width, height);
 }
 
 function draw() {
     var whichBar = mouseX / barWidth;
-if (whichBar != lastBar) {
-    var barX = whichBar * barWidth;
-     background(barX,mouseY,90);
-     fill(255);
-    lastBar = whichBar;}
-    
-  for(var i = 0; i <= width; i += 20) {
-    for(var j = 0; j <= height; j += 20) {
-      var size = dist(mouseX, mouseY, i, j);
-      size = size/max_distance * 35;
-      ellipse(i, j, size, size);
+    if (whichBar != lastBar) {
+        var barX = whichBar * barWidth;
+        background(barX, mouseY, 90);
+        fill(255);
+        lastBar = whichBar;
     }
-  }
+
+    for (var i = 0; i <= width; i += 20) {
+        for (var j = 0; j <= height; j += 20) {
+            var size = dist(mouseX, mouseY, i, j);
+            size = size / max_distance * 35;
+            ellipse(i, j, size, size);
+        }
+    }
 }
-
-

@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'french_friesmedium';
+    src: url('../fonts/french_fries-webfont.woff2') format('woff2'), url('fonts/french_fries-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: gill sans;
+}
+
+#header {
+    position: absolute;
+    left: 33%;
+    bottom: 60%;
+}
+
+#header h1 {
+    font-family: 'french_friesmedium';
+}
+
+header {
+    position: fixed;
+    bottom: 60%;
+    width: 31%;
+    left: 1%;
+    font-size: 4.9vw;
+    text-align: right;
+    color: black;
+}
+
+section {
+    width: 100%;
+    position: fixed;
+    top: 39%;
+}
+
+#excercise,
+#studio,
+#project {
+    color: white;
+    width: 33%;
+    height: 100%;
+    font-size: 3vw;
+    text-align: left;
+    position: fixed;
+    padding: 5px;
+}
+
+#excercise {
+    background-color: #ECCAC0;
+    left: 0%;
+}
+
+#studio {
+    background-color: #F3E8AF;
+    left: 33%;
+}
+
+#project {
+    background-color: #BFE0FD;
+    left: 66%;
+    width: 34%;
+}
+
+#excercise:hover {
+    background-color: rebeccapurple;
+}
+
+#studio:hover {
+    background-color: mediumvioletred;
+}
+
+#project:hover {
+    background-color: darkblue;
+}
+
+#excercise a,
+#studio a,
+#project a {
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+}
+
+#excercise a {
+    left: 0%;
+}
+
+#studio a {
+    left: 33%;
+}
+
+#project a {
+    left: 66%;
+    font-size: 2.6vw;
+}
+
+#excercise ul ul,
+#studio ul ul,
+#project ul ul {
+    visibility: hidden;
+}
+
+#excercise ul li:hover ul,
+#studio ul li:hover ul,
+#project ul li:hover ul {
+    visibility: visible;
+}
+
+#excercise a:hover,
+#studio a:hover,
+#project a:hover {
+    color: yellow;
+}
+
+footer {
+    position: fixed;
+    left: 41%;
+    bottom: 2%;
+}
+
+footer li {
+    display: inline;
+    padding-right: 4%;
+}
+
+footer a {
+    position: fixed;
+    width: 2.5%;
+    height: 32.5%;
+    opacity: 0.3;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 12px;
+}
