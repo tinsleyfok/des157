@@ -14,13 +14,13 @@
     font-family: gill sans;
 }
 
-#header {
+#mySketch {
     position: absolute;
     left: 33%;
     bottom: 60%;
 }
 
-#header h1 {
+header h1 {
     font-family: 'french_friesmedium';
 }
 
