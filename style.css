@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
-    font-family: 'french_friesmedium';
-    src: url('fonts/french_fries-webfont.woff2') format('woff2'), url('fonts/french_fries-webfont.woff') format('woff');
+    font-family: 'keep_calm_medregular';
+    src: url('fonts/keepcalm-medium-webfont.woff2') format('woff2'), url('keepcalm-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,17 +21,18 @@
 }
 
 header h1 {
-    font-family: 'french_friesmedium';
+    font-family: 'keep_calm_medregular';
+    font-size: 7vw;
+    color: #999797;
+    margin-bottom:-20px;
 }
 
 header {
     position: fixed;
-    bottom: 60%;
+    bottom: 63%;
     width: 31%;
-    left: 1%;
-    font-size: 4.9vw;
-    text-align: right;
-    color: black;
+    left: 0.8%;
+    text-align: right;    
 }
 
 section {
