@@ -1,150 +1,138 @@
 @charset "UTF-8";
 @font-face {
-    font-family: 'keep_calm_medregular';
-    src: url('fonts/keepcalm-medium-webfont.woff2') format('woff2'), url('keepcalm-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'keep_calm_medregular';
+  src: url('fonts/keepcalm-medium-webfont.woff2') format('woff2'), url('keepcalm-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: gill sans;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "gill sans";
 }
 
 #mySketch {
-    position: absolute;
-    left: 33%;
-    bottom: 60%;
+  position: fixed;
+  left: 33%;
+  bottom: 60%;
+  width: 100%;
 }
 
 header h1 {
-    font-family: 'keep_calm_medregular';
-    font-size: 7vw;
-    color: #999797;
-    margin-bottom:-20px;
+  font-family: 'keep_calm_medregular';
+  font-size: 7vw;
+  color: #999797;
+  margin-bottom: -20px;
 }
 
 header {
-    position: fixed;
-    bottom: 63%;
-    width: 31%;
-    left: 0.8%;
-    text-align: right;    
+  position: fixed;
+  bottom: 63%;
+  width: 31%;
+  left: 0.8%;
+  text-align: right;
 }
 
 section {
-    width: 100%;
-    position: fixed;
-    top: 39%;
+  width: 100%;
+  position: fixed;
+  top: 39%;
 }
 
-#excercise,
-#studio,
-#project {
-    color: white;
-    width: 33%;
-    height: 100%;
-    font-size: 3vw;
-    text-align: left;
-    position: fixed;
-    padding: 5px;
+#excercise, #studio, #project {
+  color: white;
+  width: 33%;
+  height: 100%;
+  font-size: 3vw;
+  text-align: left;
+  position: fixed;
 }
 
 #excercise {
-    background-color: #ECCAC0;
-    left: 0%;
+  background-color: #ECCAC0;
+  left: 0%;
 }
 
 #studio {
-    background-color: #F3E8AF;
-    left: 33%;
+  background-color: #F3E8AF;
+  left: 33%;
 }
 
 #project {
-    background-color: #BFE0FD;
-    left: 66%;
-    width: 34%;
+  background-color: #BFE0FD;
+  left: 66%;
+  width: 34%;
 }
 
 #excercise:hover {
-    background-color: #5F0AA4;
+  background-color: #5F0AA4;
 }
 
 #studio:hover {
-    background-color: mediumvioletred;
+  background-color: mediumvioletred;
 }
 
 #project:hover {
-    background-color: darkblue;
+  background-color: darkblue;
 }
 
-#excercise a,
-#studio a,
-#project a {
-    padding: 1%;
-    color: white;
-    text-decoration: none;
+#excercise a, #studio a, #project a {
+  padding: 2%;
+  color: white;
+  text-decoration: none;
+  font-size: 2vw;
 }
 
 #excercise a {
-    left: 0%;
-     font-size: 3vw;
-    padding:2%;
+  left: 0%;
 }
 
 #studio a {
-    left: 33%;
+  left: 33%;
 }
 
 #project a {
-    left: 66%;
-    font-size: 2.6vw;
+  left: 66%;
 }
 
-#excercise ul ul,
-#studio ul ul,
-#project ul ul {
-    visibility: hidden;
+#excercise ul ul, #studio ul ul, #project ul ul {
+  visibility: hidden;
 }
 
-#excercise ul li:hover ul,
-#studio ul li:hover ul,
-#project ul li:hover ul {
-    visibility: visible;
+#excercise ul li:hover ul, #studio ul li:hover ul, #project ul li:hover ul {
+  visibility: visible;
 }
 
-#excercise a:hover,
-#studio a:hover,
-#project a:hover {
-    color: yellow;
+#excercise a:hover, #studio a:hover, #project a:hover {
+  color: yellow;
 }
 
 footer {
-    position: fixed;
-    left: 41%;
-    bottom: 2%;
+  position: fixed;
+  left: 41%;
+  bottom: 4%;
 }
 
 footer li {
-    display: inline;
-    padding-right: 4%;
+  display: inline;
+  padding-right: 4%;
 }
 
 footer a {
-    position: fixed;
-    width: 2.5%;
-    height: 2.5%;
-    opacity: 0.3;
+  position: fixed;
+  width: 2.5%;
+  height: 2.5%;
+  opacity: 0.3;
 }
 
 footer a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 li {
-    list-style-type: none;
-    margin-bottom: 12px;
+  list-style-type: none;
+  margin-bottom: 12px;
 }

@@ -9,7 +9,7 @@ var lastBar = -1;
 var max_distance;
 
 function setup() {
-    createCanvas(800, 250);
+    createCanvas(1300, 450);
     background(50);
     noStroke()
     colorMode(HSB, width, height, 100);
@@ -25,10 +25,10 @@ function draw() {
         lastBar = whichBar;
     }
 
-    for (var i = 0; i <= width; i += 20) {
-        for (var j = 0; j <= height; j += 20) {
+    for (var i = 0; i <= width; i += 12) {
+        for (var j = 0; j <= height; j += 12) {
             var size = dist(mouseX, mouseY, i, j);
-            size = size / max_distance * 35;
+            size = size / max_distance * 50;
             ellipse(i, j, size, size);
         }
     }
