@@ -25,10 +25,10 @@ function draw() {
         lastBar = whichBar;
     }
 
-    for (var i = 0; i <= width; i += 12) {
-        for (var j = 0; j <= height; j += 12) {
+    for (var i = 0; i <= width; i += 15) {
+        for (var j = 0; j <= height; j += 15) {
             var size = dist(mouseX, mouseY, i, j);
-            size = size / max_distance * 50;
+            size = size / max_distance * 55;
             ellipse(i, j, size, size);
         }
     }
