@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    
-<audio controls autoplay>
-	  <source src="images/song.m4a" type="audio/mp3">
-	</audio>
-    
+
+    <audio controls autoplay>
+        <source src="images/song.m4a" type="audio/mp3">
+    </audio>
+
     <header>
         <h1> MADLIBS 2.0</h1>
     </header>
 
-    <article>
+    <section>
         <form name="f">
             <div>
                 <label>The Person You Hate The Most : </label>
@@ -32,36 +32,41 @@
 
             <div class='smell'>
                 <label>Pick One : </label>
-                <li>
-                    <label class='option1' >Animal Feces</label>
-                    <img src="images/feces.png" class="feces" alt="feces" />
-                </li>
-                <li>
-                    <label class='option2' >Decomposing Human Flesh</label>
-                     <img src="images/flesh.jpg" class="flesh" alt="flesh" />
-                </li>
-                <li>
-                    <label class='option3' >Stagnant Sewer</label>
-                     <img src="images/sewer.jpg" class="sewer" alt="sewer" />
-                </li>
+                <ul>
+                    <li>
+                        <label class='option1'>Animal Feces</label>
+                        <img src="images/feces.png" class="feces" alt="feces" />
+                    </li>
+                    <li>
+                        <label class='option2'>Decomposing Human Flesh</label>
+                        <img src="images/flesh.jpg" class="flesh" alt="flesh" />
+                    </li>
+                    <li>
+                        <label class='option3'>Stagnant Sewer</label>
+                        <img src="images/sewer.jpg" class="sewer" alt="sewer" />
+                    </li>
+                </ul>
                 <input type="text" name="smell">
             </div>
 
             <div class='creature'>
                 <label>Select One : </label>
-                <li>
-                    <label class='option4' >King Cobra</label>
-                     <img src="images/cobra.jpg" class="cobra" alt="cobra"/>
-                </li> 
-                <li>
-                    <label class='option5' >Death Stalker Scorpion</label>
-                    <img src="images/Scorpion.jpg" class="scorpion" alt="scorpion" />
-                </li>
-                <li>
-                    <label class='option6'>Poison Dart Frog</label>
-                    <img src="images/frog.jpg" class="frog" alt="frog" />
-                    <input type="text" name="creature">
-                </li>
+                <ul>
+                    <li>
+                        <label class='option4'>King Cobra</label>
+                        <img src="images/cobra.jpg" class="cobra" alt="cobra" />
+                    </li>
+                    <li>
+                        <label class='option5'>Death Stalker Scorpion</label>
+                        <img src="images/Scorpion.jpg" class="scorpion" alt="scorpion" />
+                    </li>
+                    <li>
+                        <label class='option6'>Poison Dart Frog</label>
+                        <img src="images/frog.jpg" class="frog" alt="frog" />
+                    </li>
+                </ul>
+                <input type="text" name="creature">
+
             </div>
 
             <div class="time">
@@ -73,12 +78,16 @@
             <input type="submit" value="submit" />
 
         </form>
-
-        <aside>
-            <p id="result"></p>
-        </aside>
-        <br><br><br><br>
-        <footer>
+    </section>
+    <aside>
+        <p id="result"></p>
+    </aside>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer>
         <a href="https://validator.w3.org/check?uri=referer"> HTML 5 |</a>
-      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-        </footer>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+    </footer>
