@@ -43,7 +43,7 @@ label {
 div{
     padding-bottom: 5%;
 }
-article {
+section {
     position: absolute;
     margin: 4%;
     left: 7%;
@@ -57,7 +57,7 @@ article {
 form{
     padding-bottom: 2%;
 }
-ul{
+.creature,.smell{
    padding-top: 5%; 
 }
 
@@ -145,11 +145,11 @@ input[type="reset"]:focus, input[type="submit"]:focus {
 
 
 .creature img{ 
-    top:48%;
+    top:45%;
 }
 
 .smell img{
-    top:27%;  
+    top:25%;  
 }
 
 aside {
