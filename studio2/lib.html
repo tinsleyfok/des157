@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOMContentLoaded template</title>
+    <link href="style2.css" rel="stylesheet" />
+    <script src='script.js' type="text/javascript"></script>
+</head>
+
+<body>
+    
+<audio controls autoplay>
+	  <source src="images/song.m4a" type="audio/mp3">
+	</audio>
+    
+    <header>
+        <h1> MADLIBS 2.0</h1>
+    </header>
+
+    <article>
+        <form name="f">
+            <div>
+                <label>The Person You Hate The Most : </label>
+                <input type="text" name="name">
+            </div>
+
+            <div>
+                <label>Most Disgusting Food In The World :</label>
+                <input type="text" name="food">
+            </div>
+
+            <ul class='smell'>
+                <label>Pick One : </label>
+                <li>
+                    <label class='option1' >Animal Feces</label>
+                    <img src="images/feces.png" class="feces" />
+                </li>
+                <li>
+                    <label class='option2' >Decomposing Human Flesh</label>
+                     <img src="images/flesh.jpg" class="flesh" />
+                </li>
+                <li>
+                    <label class='option3' >Stagnant Sewer</label>
+                     <img src="images/sewer.jpg" class="sewer" />
+                </li>
+                <input type="text" name="smell">
+            </ul>
+
+            <ul class='creature'>
+                <label>Select One : </label>
+                <li>
+                    <label class='option4' >King Cobra</label>
+                     <img src="images/cobra.jpg" class="cobra" />
+                </li> 
+                <li>
+                    <label class='option5' >Death Stalker Scorpion</label>
+                    <img src="images/Scorpion.jpg" class="scorpion" />
+                </li>
+                <li>
+                    <label class='option6'>Poison Dart Frog</label>
+                    <img src="images/frog.jpg" class="frog" />
+                    <input type="text" name="creature">
+                </li>
+            </ul>
+
+            <div class="time">
+                <label>You Usually Get Up At :</label>
+                <input type="text" name="time">
+            </div>
+
+            <input type="reset" value="reset" />
+            <input type="submit" value="submit" />
+
+        </form>
+
+        <aside>
+            <p id="result"></p>
+        </aside>
+        <br><br><br><br>
+        <footer>
+        <a href="https://validator.w3.org/check?uri=referer"> HTML 5 |</a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+        </footer>

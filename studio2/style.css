@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'burtons_nightmareregular';
+    src: url('nitemare-webfont.woff2') format('woff2'),
+         url('nitemare-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+body {
+    background-image: url(images/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section a {
+    color: #E9B31F;
+    opacity: 0.9;
+    font-family: 'burtons_nightmareregular';
+    font-size: 7vw;
+    text-decoration: none;
+}
+#warning {
+    color:white;
+    font-size:1.5vw;
+    position: absolute;
+    left:50%;
+    opacity: 0.7;
+    font-family: 'times';
+    bottom:-10;
+    display:none;
+}
+
+#title:hover #warning{
+    display:block;
+}
+section{
+    position: absolute;
+    left:5%;
+    top:5%;
+    width:50%;
+
+}
