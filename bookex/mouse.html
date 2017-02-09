@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ch14 Mouse trail </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px
+        }
+        
+        body {
+            font-family: Verdana;
+            background-color: grey;
+            font-size: 15px;
+            margin: 24px;
+        }
+        
+        h1 {
+            color: black;
+        }
+        
+        .trail {
+            background: white;
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chapter 14: Mouse Trail</h1>
+    <script>
+        var circles = [];
+        for (var i = 0; i < 10; i++) {
+            var elem = document.createElement("div");
+            elem.className = "trail";
+            document.body.appendChild(elem);
+            circles.push(elem);
+        }
+        var currentCircle = 0;
+
+        addEventListener("mousemove", function (event) {
+            var circle = circles[currentCircle];
+            circle.style.left = (event.pageX - 5) + "px";
+            circle.style.top = (event.pageY - 5) + "px";
+            currentCircle = (currentCircle + 1) % circles.length;
+        });
+    </script>
+</body>
+
+</html>
