@@ -97,19 +97,9 @@ footer a {
 
 /*second page*/
 
-#page-two img {
-    width: 100%;
-    height: 96%;
-}
 
-@media (min-width: 40em) {
-    main {
-        width: 80%;
-        height: 80%;
-    }
-}
 
-#new {
+#chanel {
     position: fixed;
     left: 0%;
     top: 0%;
@@ -130,7 +120,7 @@ footer a {
 
 #yellow {
     position: fixed;
-    top: 45%;
+    top: 50%;
     left: 45%;
     width: 27.5%;
     height: 50%;
@@ -140,7 +130,7 @@ footer a {
 
 #black {
     position: fixed;
-    top: 45%;
+    top: 50%;
     left: 72.5%;
     width: 27.5%;
     height: 50%;
@@ -148,13 +138,44 @@ footer a {
     list-style: none;
 }
 
-#new:hover,
+#chanel:hover,
 #coco:hover,
 #black:hover,
 #yellow:hover {
     cursor: pointer;
 }
 
+#chaneltext{
+    opacity: 0.8;
+    position: fixed;
+    top: 60%;
+    font-size: 15vw;
+    display: none;
+}
+
+#cocotext{
+    position: fixed;
+    right:5%;
+    top: 20%;
+    font-size: 15vw;
+  
+}
+
+#yellowtext{
+    position: fixed;
+    right:30%;
+    bottom: 10%;
+    font-size: 10vw;
+
+}
+
+#blacktext{
+    position: fixed;
+    right:2%;
+    bottom: 10%;
+    font-size: 10vw;
+     
+}
 /*Page three */
 
 #one {
