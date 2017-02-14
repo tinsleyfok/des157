@@ -94,6 +94,10 @@ footer a{
     padding-left: 5px;
 }
 
+footer a:hover{
+    font-size: 16px;
+    transition: 0.2s;
+}
 
 #page-two li{
       text-decoration: none;
@@ -139,7 +143,7 @@ footer a{
     -webkit-animation-name: kenburns-4;
     z-index: 0;
 }
-
+}
 @-webkit-keyframes kenburns-1 {
     0% {
         opacity: 1;
@@ -208,7 +212,7 @@ footer a{
     100% {
         opacity: 1;
     }
-
+}
 @-webkit-keyframes kenburns-2 {
     23.4375% {
         opacity: 1;
@@ -261,7 +265,7 @@ footer a{
         -webkit-transform: scale(1.2);
  
     }
-
+}
 @-webkit-keyframes kenburns-3 {
     48.4375% {
         opacity: 1;
@@ -315,7 +319,7 @@ footer a{
         -webkit-transform: scale(1.2);
   
     }
-
+}
 @-webkit-keyframes kenburns-4 {
     73.4375% {
         opacity: 1;
