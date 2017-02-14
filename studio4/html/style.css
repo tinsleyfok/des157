@@ -155,8 +155,39 @@ footer a {
     cursor: pointer;
 }
 
+/*Page three */
 
-/*Page Five */
+#one {
+    position: fixed;
+    left: 55%;
+    top: 0%;
+    width: 45%;
+    list-style: none;
+    height: 100%;
+}
+
+#two {
+    position: fixed;
+    top: -10%;
+    left: 0%;
+    z-index: 40;
+    width: 55%;
+    height: 60%;
+    list-style: none;
+}
+
+#three{
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    z-index: 40;
+    width: 55%;
+    height: 60%;
+    list-style: none;
+}
+
+
+/*Page four */
 
 .contain {
     display: -webkit-box;
