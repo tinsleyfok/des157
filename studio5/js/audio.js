@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var context;
     var source, sourceJs;
     var analyser;
-    var url = "../data/tellthetruth.mp3";
+    var url = "../studio5/data/tellthetruth.mp3";
     var array = new Array();
     var boost = 0;
 
