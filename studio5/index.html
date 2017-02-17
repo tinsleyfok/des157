@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOMContentLoaded template</title>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:200,300" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="github"><a href="http://tinsleyfok.github.io/des157">Tinsley's Protal</a></div>
+    <!link to jquery library>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!link to Three.js>
+    <script type="text/javascript" src="three.js-master/build/three.min.js"></script>
+    <script type="text/javascript" src="js/OrbitControls.js"></script>
+    <script type="text/javascript" src="js/visualizer.js"></script>
+    <script type="text/javascript" src="js/audio.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-28022914-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <div onclick="play();" id="play" style="width:147px; height:699;display:block">
+        <div id="play_link" style="top:317.5px; left:41.5px;"></div>
+    </div>
+    
+    <footer>
+        <nav>
+            <ul>
+                <li> <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML</a></li>
+                <li><a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS</a></li>
+                <li><a href="http://srchea.com/experimenting-with-web-audio-api-three-js-webgl#webgl-part-make-the-cubes-react-regarding-the-sound">Tutorial</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
