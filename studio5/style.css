@@ -33,7 +33,7 @@ canvas{
 	left: 40%;
 	height: 50%;
 	width: 50%;
-	background: url('data/play.png');
+	background: url('data/play.png') no-repeat;
 	cursor: pointer;
 }
 
