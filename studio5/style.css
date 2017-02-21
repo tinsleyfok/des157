@@ -30,9 +30,9 @@ canvas{
 #play_link {
 	position: fixed;
 	top: 40%;
-	left: 4%0;
-	height: 64px;
-	width: 64px;
+	left: 40%;
+	height: 50%;
+	width: 50%;
 	background: url('data/play.png');
 	cursor: pointer;
 }
