@@ -38,32 +38,40 @@ canvas{
 }
 
 
-
-
+#library {
+    position: absolute;
+    bottom: 4%;
+    left: 3%;
+    font-size: 1.2vw;
+    padding: 5px;;
+}
 
 footer {
     position: absolute;
     bottom: 3%;
     right: 3%;
-    padding: 5px;
+    padding: 10px;
     font-size: 1.2vw;
     text-align: right;
 }
 
-footer a{
+#library a,
+footer a {
     text-decoration: none;
-    color:black;
-     opacity: 0.5;
+    color: black;
+    opacity: 0.5;
 }
 
-footer li{
-      display: inline;
+#library li,
+footer li {
+    display: inline;
     list-style-type: none;
-    padding:2px;
+    padding: 5px;
 }
 
+#library a:hover,
 footer a:hover {
-    font-size:1.5vw;
-    transition:0.3s;
-         opacity: 1;
+    font-size: 1.5vw;
+    transition: 0.3s;
+    opacity: 1;
 }
