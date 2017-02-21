@@ -29,8 +29,8 @@ canvas{
 
 #play_link {
 	position: fixed;
-	top: 30%;
-	left: 30%;
+	top: 5%;
+	left: 5%;
 	height: 50%;
 	width: 50%;
 	background: url('data/play.png') no-repeat;
