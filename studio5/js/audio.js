@@ -1,7 +1,7 @@
 var context;
 var source, sourceJs;
 var analyser;
-var url = '../data/tellthetruth.mp3';
+var url ='https://api.soundcloud.com/tracks/127070185/stream?client_id=0aaf73b4de24ee4e86313e01d458083d';
 var array = new Array();
 var boost = 0;
 
@@ -65,9 +65,9 @@ request.onload = function() {
 
 			$('#info')
 				.fadeOut('normal', function() {
-					$(this).html('<div id="artist"><a class="name" href="https://soundcloud.com/coyotekisses" target="_blank">Coyote Kisses</a><br /><a class="song" href="https://soundcloud.com/coyotekisses/six-shooter" target="_blank">Six shooter</a><br /></div><div><img src="data/coyote_kisses.jpg" width="58" height="58" /></div>');
+					
 				})
-				.fadeIn();
+				
 
 			clearInterval(interval);
 
