@@ -65,6 +65,7 @@ section {
   background-color: #BFE0FD;
   left: 66%;
   width: 34%;
+
 }
 
 #excercise:hover {
@@ -80,10 +81,11 @@ section {
 }
 
 #excercise a, #studio a, #project a {
-  padding: 2%;
+
   color: white;
   text-decoration: none;
   font-size: 2vw;
+     
 }
 
 #excercise a {
@@ -96,6 +98,7 @@ section {
 
 #project a {
   left: 66%;
+      font-size: 1.7vw;
 }
 
 #excercise ul ul, #studio ul ul, #project ul ul {
@@ -134,5 +137,11 @@ footer a:hover {
 
 li {
   list-style-type: none;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
+     margin-left: 6px;
+    padding-bottom: 0px;
+}
+
+#project li{
+     margin-bottom: -15px;
 }
