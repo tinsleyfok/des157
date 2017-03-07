@@ -98,7 +98,18 @@ section {
 
 #project a {
   left: 66%;
-      font-size: 1.7vw;
+      font-size: 1.5vw;
+}
+
+#hi {
+    position: absolute;
+    left: 55%;
+    top:11%;
+       font-size: 1.5vw;
+}
+
+#hi li{
+    padding: 3%;
 }
 
 #excercise ul ul, #studio ul ul, #project ul ul {
