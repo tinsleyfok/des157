@@ -3,16 +3,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
 
-    $(document).ready(function () {
 
+    $(document).ready(function () {
         setTimeout(function () {
             $('.fly-in-text').removeClass('hidden');
         }, 500);
 
         setTimeout(function () {
-            $('.fly-in-text').delay(8000).fadeOut();
+            $('.fly-in-text').delay(4000).fadeOut();
+            $('.text').delay(5000).fadeIn();
+            $('button').delay(6500).fadeIn();
         });
-
     });
-
 });
