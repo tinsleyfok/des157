@@ -41,12 +41,12 @@
 
          var materials = [
 
-					loadTexture('../skybox/px.jpg'), // right
-					loadTexture('../skybox/nx.jpg'), // left
-					loadTexture('../skybox/py.jpg'), // top
-					loadTexture('../skybox/ny.jpg'), // bottom
-					loadTexture('../skybox/pz.jpg'), // back
-					loadTexture('../skybox/nz.jpg') // front
+					loadTexture('skybox/px.jpg'), // right
+					loadTexture('skybox/nx.jpg'), // left
+					loadTexture('skybox/py.jpg'), // top
+					loadTexture('skybox/ny.jpg'), // bottom
+					loadTexture('skybox/pz.jpg'), // back
+					loadTexture('skybox/nz.jpg') // front
 
 				];
 
