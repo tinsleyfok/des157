@@ -13,11 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
             $('.fly-in-text').delay(4000).fadeOut();
             $('.text').delay(5000).fadeIn();
             $('button').delay(6500).fadeIn();
+
         });
-        $('button').click(function () {
-            window.location.href = 'scene.html';
-            return false;
-        });
+    });
+    $("button").click(function () {
+        $('.text').fadeOut();
+        $('button').hide();
     });
 
 });

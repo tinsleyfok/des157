@@ -226,6 +226,10 @@ button:focus {
 
 }
 
+button a{
+    text-decoration: none;
+    color:white;
+}
 
 #left {
     position: fixed;

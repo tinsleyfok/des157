@@ -1,205 +1,210 @@
-var camera, scene, renderer;
+ document.addEventListener("DOMContentLoaded", function (event) {
+     console.log("DOM fully loaded and parsed");
 
-var texture_placeholder,
-    isUserInteracting = false,
-    onMouseDownMouseX = 0,
-    onMouseDownMouseY = 0,
-    lon = 90,
-    onMouseDownLon = 0,
-    lat = 0,
-    onMouseDownLat = 0,
-    phi = 0,
-    theta = 0,
-    target = new THREE.Vector3();
+     var camera, scene, renderer;
+     var texture_placeholder,
+         isUserInteracting = false,
+         onMouseDownMouseX = 0,
+         onMouseDownMouseY = 0,
+         lon = 90,
+         onMouseDownLon = 0,
+         lat = 0,
+         onMouseDownLat = 0,
+         phi = 0,
+         theta = 0,
+         target = new THREE.Vector3();
 
-init();
-animate();
+     var begin=document.getElementById('begin');
+     begin.addEventListener('click',initAnim);
+     begin.addEventListener('click',playAnim);
+     
+     //init();
+     //animate();
 
-button.addEventListener("click", onClick, false);
+     function initAnim() {
 
-function init() {
+         var container, mesh;
 
-    var container, mesh;
+         container = document.getElementById('container');
 
-    container = document.getElementById('container');
+         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
 
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
+         scene = new THREE.Scene();
 
-    scene = new THREE.Scene();
+         texture_placeholder = document.createElement('canvas');
+         texture_placeholder.width = 128;
+         texture_placeholder.height = 128;
 
-    texture_placeholder = document.createElement('canvas');
-    texture_placeholder.width = 128;
-    texture_placeholder.height = 128;
+         var context = texture_placeholder.getContext('2d');
+         context.fillStyle = 'rgb( 200, 200, 200 )';
+         context.fillRect(0, 0, texture_placeholder.width, texture_placeholder.height);
 
-    var context = texture_placeholder.getContext('2d');
-    context.fillStyle = 'rgb( 200, 200, 200 )';
-    context.fillRect(0, 0, texture_placeholder.width, texture_placeholder.height);
+         var materials = [
 
-    var materials = [
-
-					loadTexture('../three/examples/textures/cube/skybox/px.jpg'), // right
-					loadTexture('../three/examples/textures/cube/skybox/nx.jpg'), // left
-					loadTexture('../three/examples/textures/cube/skybox/py.jpg'), // top
-					loadTexture('../three/examples/textures/cube/skybox/ny.jpg'), // bottom
-					loadTexture('../three/examples/textures/cube/skybox/pz.jpg'), // back
-					loadTexture('../three/examples/textures/cube/skybox/nz.jpg') // front
+					loadTexture('../skybox/px.jpg'), // right
+					loadTexture('../skybox/nx.jpg'), // left
+					loadTexture('../skybox/py.jpg'), // top
+					loadTexture('../skybox/ny.jpg'), // bottom
+					loadTexture('../skybox/pz.jpg'), // back
+					loadTexture('../skybox/nz.jpg') // front
 
 				];
 
-    mesh = new THREE.Mesh(new THREE.BoxGeometry(300, 300, 300, 7, 7, 7), new THREE.MultiMaterial(materials));
-    mesh.scale.x = -1;
-    scene.add(mesh);
+         mesh = new THREE.Mesh(new THREE.BoxGeometry(300, 300, 300, 7, 7, 7), new THREE.MultiMaterial(materials));
+         mesh.scale.x = -1;
+         scene.add(mesh);
 
-    for (var i = 0, l = mesh.geometry.vertices.length; i < l; i++) {
+         for (var i = 0, l = mesh.geometry.vertices.length; i < l; i++) {
 
-        var vertex = mesh.geometry.vertices[i];
+             var vertex = mesh.geometry.vertices[i];
 
-        vertex.normalize();
-        vertex.multiplyScalar(550);
+             vertex.normalize();
+             vertex.multiplyScalar(550);
 
-    }
+         }
 
-    renderer = new THREE.CanvasRenderer();
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    container.appendChild(renderer.domElement);
+         renderer = new THREE.CanvasRenderer();
+         renderer.setPixelRatio(window.devicePixelRatio);
+         renderer.setSize(window.innerWidth, window.innerHeight);
+         container.appendChild(renderer.domElement);
 
-    document.addEventListener('mousedown', onDocumentMouseDown, false);
-    document.addEventListener('mousemove', onDocumentMouseMove, false);
-    document.addEventListener('mouseup', onDocumentMouseUp, false);
-    document.addEventListener('wheel', onDocumentMouseWheel, false);
+         document.addEventListener('mousedown', onDocumentMouseDown, false);
+         document.addEventListener('mousemover', onDocumentMouseMove, false);
+         document.addEventListener('mouseup', onDocumentMouseUp, false);
+         document.addEventListener('wheel', onDocumentMouseWheel, false);
 
-    document.addEventListener('touchstart', onDocumentTouchStart, false);
-    document.addEventListener('touchmove', onDocumentTouchMove, false);
+         document.addEventListener('touchstart', onDocumentTouchStart, false);
+         document.addEventListener('touchmove', onDocumentTouchMove, false);
 
-    //
+         //
 
-    window.addEventListener('resize', onWindowResize, false);
+         window.addEventListener('resize', onWindowResize, false);
 
-}
+     }
 
-function onWindowResize() {
+     function onWindowResize() {
 
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
+         camera.aspect = window.innerWidth / window.innerHeight;
+         camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+         renderer.setSize(window.innerWidth, window.innerHeight);
 
-}
+     }
 
-function loadTexture(path) {
+     function loadTexture(path) {
 
-    var texture = new THREE.Texture(texture_placeholder);
-    var material = new THREE.MeshBasicMaterial({
-        map: texture,
-        overdraw: 0.5
-    });
+         var texture = new THREE.Texture(texture_placeholder);
+         var material = new THREE.MeshBasicMaterial({
+             map: texture,
+             overdraw: 0.5
+         });
 
-    var image = new Image();
-    image.onload = function () {
+         var image = new Image();
+         image.onload = function () {
 
-        texture.image = this;
-        texture.needsUpdate = true;
+             texture.image = this;
+             texture.needsUpdate = true;
 
-    };
-    image.src = path;
+         };
+         image.src = path;
 
-    return material;
+         return material;
 
-}
+     }
 
-function onDocumentMouseDown(event) {
+     function onDocumentMouseDown(event) {
 
-    event.preventDefault();
+         event.preventDefault();
 
-    isUserInteracting = true;
+         isUserInteracting = true;
 
-    onPointerDownPointerX = event.clientX;
-    onPointerDownPointerY = event.clientY;
+         onPointerDownPointerX = event.clientX;
+         onPointerDownPointerY = event.clientY;
 
-    onPointerDownLon = lon;
-    onPointerDownLat = lat;
+         onPointerDownLon = lon;
+         onPointerDownLat = lat;
 
-}
+     }
 
-function onDocumentMouseMove(event) {
+     function onDocumentMouseMove(event) {
 
-    if (isUserInteracting === true) {
+         if (isUserInteracting === true) {
 
-        lon = (onPointerDownPointerX - event.clientX) * 0.1 + onPointerDownLon;
-        lat = (event.clientY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
+             lon = (onPointerDownPointerX - event.clientX) * 0.1 + onPointerDownLon;
+             lat = (event.clientY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
 
-    }
-}
+         }
+     }
 
-function onDocumentMouseUp(event) {
+     function onDocumentMouseUp(event) {
 
-    isUserInteracting = false;
+         isUserInteracting = false;
 
-}
+     }
 
-function onDocumentMouseWheel(event) {
+     function onDocumentMouseWheel(event) {
 
-    camera.fov += event.deltaY * 0.05;
-    camera.updateProjectionMatrix();
+         camera.fov += event.deltaY * 0.05;
+         camera.updateProjectionMatrix();
 
-}
+     }
 
-function onDocumentTouchStart(event) {
+     function onDocumentTouchStart(event) {
 
-    if (event.touches.length == 1) {
+         if (event.touches.length == 1) {
 
-        event.preventDefault();
+             event.preventDefault();
 
-        onPointerDownPointerX = event.touches[0].pageX;
-        onPointerDownPointerY = event.touches[0].pageY;
+             onPointerDownPointerX = event.touches[0].pageX;
+             onPointerDownPointerY = event.touches[0].pageY;
 
-        onPointerDownLon = lon;
-        onPointerDownLat = lat;
+             onPointerDownLon = lon;
+             onPointerDownLat = lat;
 
-    }
+         }
 
-}
+     }
 
-function onDocumentTouchMove(event) {
+     function onDocumentTouchMove(event) {
 
-    if (event.touches.length == 1) {
+         if (event.touches.length == 1) {
 
-        event.preventDefault();
+             event.preventDefault();
 
-        lon = (onPointerDownPointerX - event.touches[0].pageX) * 0.1 + onPointerDownLon;
-        lat = (event.touches[0].pageY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
+             lon = (onPointerDownPointerX - event.touches[0].pageX) * 0.1 + onPointerDownLon;
+             lat = (event.touches[0].pageY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
 
-    }
+         }
 
-}
+     }
 
-function animate() {
+     function playAnim() {
 
-    requestAnimationFrame(animate);
-    update();
+         requestAnimationFrame(playAnim);
+         update();
 
-}
+     }
 
-function update() {
+     function update() {
 
-    if (isUserInteracting === false) {
+         if (isUserInteracting === false) {
 
-        lon += 0.1;
+             lon += 0.1;
 
-    }
+         }
 
-    lat = Math.max(-85, Math.min(85, lat));
-    phi = THREE.Math.degToRad(90 - lat);
-    theta = THREE.Math.degToRad(lon);
+         lat = Math.max(-85, Math.min(85, lat));
+         phi = THREE.Math.degToRad(90 - lat);
+         theta = THREE.Math.degToRad(lon);
 
-    target.x = 500 * Math.sin(phi) * Math.cos(theta);
-    target.y = 500 * Math.cos(phi);
-    target.z = 500 * Math.sin(phi) * Math.sin(theta);
+         target.x = 500 * Math.sin(phi) * Math.cos(theta);
+         target.y = 500 * Math.cos(phi);
+         target.z = 500 * Math.sin(phi) * Math.sin(theta);
 
-    camera.position.copy(target).negate();
-    camera.lookAt(target);
+         camera.position.copy(target).negate();
+         camera.lookAt(target);
 
-    renderer.render(scene, camera);
+         renderer.render(scene, camera);
 
-}
+     }
+ });
