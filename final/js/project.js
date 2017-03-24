@@ -348,9 +348,9 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderseven.setMaterials(materials);
             objLoaderseven.setPath('obj/');
             objLoaderseven.load('Wood_Boat.obj', function (object) {
-                object.position.y = 0;
+                object.position.y = 5;
                 object.position.x = 300;
-                object.position.z = -900;     
+                object.position.z = -700;     
                 scene.add(object);
             }, onProgress, onError);
         });
@@ -369,6 +369,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 scene.add(object);
             }, onProgress, onError);
         });
+        
+             var mtlLoadernine = new THREE.MTLLoader();
+        mtlLoadernine.setPath('obj/');
+        mtlLoadernine.load('BlueTang1anim2UV3NF.mtl', function (materials) {
+            materials.preload();
+            var objLoadernine = new THREE.OBJLoader();
+            objLoadernine.setMaterials(materials);
+            objLoadernine.setPath('obj/');
+            objLoadernine.load('BlueTang.obj', function (object) {
+                object.position.y = 20;
+                object.position.x = -50;
+                object.position.z = -20;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
+        
         
 
         //
