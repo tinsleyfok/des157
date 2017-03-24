@@ -304,23 +304,23 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderfour.load('Barracuda2anim.obj', function (object) {
                 object.position.y = 10;
                 object.position.x = -10;
-                object.position.z = -20;     
+                object.position.z = -50;     
                 scene.add(object);
             }, onProgress, onError);
         });
         
         
         var mtlLoaderfive = new THREE.MTLLoader();
-        mtlLoaderfive.setPath('obj/fish/BlueStarfish/');
+        mtlLoaderfive.setPath('obj/');
         mtlLoaderfive.load('BluieStarfish.mtl', function (materials) {
             materials.preload();
             var objLoaderfour = new THREE.OBJLoader();
             objLoaderfive.setMaterials(materials);
-            objLoaderfive.setPath('obj/fish/BlueStarfish/');
+            objLoaderfive.setPath('obj/');
             objLoaderfive.load('BluieStarfish.obj', function (object) {
                 object.position.y = 10;
                 object.position.x = -10;
-                object.position.z = -10;     
+                object.position.z = -80;     
                 scene.add(object);
             }, onProgress, onError);
         });
