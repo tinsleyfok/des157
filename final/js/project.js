@@ -237,16 +237,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // objects
-        var loader = new THREE.OBJLoader(manager);
-        loader.load('obj/male02.obj', function (object) {
-            object.traverse(function (child) {
-                if (child instanceof THREE.Mesh) {
-                    child.material.map = texture;
-                }
-            });
-            object.position.y = -95;
+        var manager = new THREE.LoadingManager();
+				manager.onProgress = function( item, loaded, total ) {
+					console.log( item, loaded, total );
+				};
+				var onProgress = function( xhr ) {
+					if ( xhr.lengthComputable ) {
+						var percentComplete = xhr.loaded / xhr.total * 100;
+						console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+					}
+				};
+				var onError = function( xhr ) {
+				};
+        var loader = new THREE.FBXLoader(manager);
+        loader.load('js/xsi_man_skinning.fbx', function (object) {
+            object.mixer = new THREE.AnimationMixer(object);
+            mixers.push(object.mixer);
+            var action = object.mixer.clipAction(object.animations[0]);
+            action.play();
             scene.add(object);
         }, onProgress, onError);
+        loader.load('js/nurbs.fbx', function (object) {
+            scene.add(object);
+        }, onProgress, onError);
+
 
         //
 
