@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mtlLoaderfive.setPath('obj/');
         mtlLoaderfive.load('BluieStarfish.mtl', function (materials) {
             materials.preload();
-            var objLoaderfour = new THREE.OBJLoader();
+            var objLoaderfive = new THREE.OBJLoader();
             objLoaderfive.setMaterials(materials);
             objLoaderfive.setPath('obj/');
             objLoaderfive.load('BluieStarfish.obj', function (object) {
