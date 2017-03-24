@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // floor
 
-       
+
 
         geometry = new THREE.PlaneGeometry(20000, 20000, 100, 100);
         geometry.rotateX(-Math.PI / 2);
@@ -237,21 +237,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // objects
-	var loader = new THREE.JSONLoader();
-				loader.load( 'js/flamingo.js', function( geometry ) {
-					var material = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0xffffff, shininess: 20, morphTargets: true, vertexColors: THREE.FaceColors, shading: THREE.FlatShading } );
-					var mesh = new THREE.Mesh( geometry, material );
-					var s = 0.35;
-					mesh.scale.set( s, s, s );
-					mesh.position.y = 15;
-					mesh.rotation.y = -1;
-					mesh.castShadow = true;
-					mesh.receiveShadow = true;
-					scene.add( mesh );
-					var mixer = new THREE.AnimationMixer( mesh );
-					mixer.clipAction( geometry.animations[ 0 ] ).setDuration( 1 ).play();
-					mixers.push( mixer );
-				} );
+        var loader = new THREE.OBJLoader(manager);
+        loader.load('obj/male02.obj', function (object) {
+            object.traverse(function (child) {
+                if (child instanceof THREE.Mesh) {
+                    child.material.map = texture;
+                }
+            });
+            object.position.y = -95;
+            scene.add(object);
+        }, onProgress, onError);
 
         //
 
