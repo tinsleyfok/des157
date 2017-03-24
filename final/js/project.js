@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoader.setPath('obj/obj_Grass/');
             objLoader.load('grass.obj', function (object) {
                 object.position.y = -50;
-                 object.position.x = 500;
+                 object.position.x = -500;
                 scene.add(object);
             }, onProgress, onError);
         });
