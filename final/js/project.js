@@ -247,16 +247,16 @@ document.addEventListener("DOMContentLoaded", function () {
         var onError = function (xhr) {};
         THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
         var mtlLoader = new THREE.MTLLoader();
-        mtlLoader.setPath('obj/obj_Grass/');
-        mtlLoader.load('grass.mtl', function (materials) {
+        mtlLoader.setPath('obj/');
+        mtlLoader.load('obj_Grass/grass.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
-            objLoader.setPath('obj/obj_Grass/');
-            objLoader.load('grass.obj', function (object) {
+            objLoader.setPath('obj/');
+            objLoader.load('obj_Grass/grass.obj', function (object) {
                 object.position.y = -50;
-                object.position.x = -100;
-                object.position.z = -100;
+                object.position.x = -300;
+                object.position.z = -300;
                 
                 scene.add(object);
             }, onProgress, onError);
