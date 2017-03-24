@@ -295,14 +295,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         
              var mtlLoaderfour = new THREE.MTLLoader();
-        mtlLoaderfour.setPath('obj/fish/Barracuda');
+        mtlLoaderfour.setPath('obj/fish/Barracuda/');
         mtlLoaderfour.load('Barracuda2anim.mtl', function (materials) {
             materials.preload();
             var objLoaderfour = new THREE.OBJLoader();
             objLoaderfour.setMaterials(materials);
-            objLoaderfour.setPath('obj/fish/Barracuda');
+            objLoaderfour.setPath('obj/fish/Barracuda/');
             objLoaderfour.load('Barracuda2anim.obj', function (object) {
-                object.position.y = 0;
+                object.position.y = 10;
                 object.position.x = -10;
                 object.position.z = -20;     
                 scene.add(object);
@@ -311,14 +311,14 @@ document.addEventListener("DOMContentLoaded", function () {
         
         
         var mtlLoaderfive = new THREE.MTLLoader();
-        mtlLoaderfive.setPath('obj/fish/BlueStarfish');
+        mtlLoaderfive.setPath('obj/fish/BlueStarfish/');
         mtlLoaderfive.load('BluieStarfish.mtl', function (materials) {
             materials.preload();
             var objLoaderfour = new THREE.OBJLoader();
             objLoaderfive.setMaterials(materials);
-            objLoaderfive.setPath('obj/fish/BlueStarfish');
+            objLoaderfive.setPath('obj/fish/BlueStarfish/');
             objLoaderfive.load('BluieStarfish.obj', function (object) {
-                object.position.y = 0;
+                object.position.y = 10;
                 object.position.x = -10;
                 object.position.z = -10;     
                 scene.add(object);
@@ -336,6 +336,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 object.position.y = -50;
                 object.position.x = 300;
                 object.position.z = 400;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
+        
+           var mtlLoaderseven = new THREE.MTLLoader();
+        mtlLoaderseven.setPath('obj/');
+        mtlLoaderseven.load('Wood_boat.mtl', function (materials) {
+            materials.preload();
+            var objLoaderseven = new THREE.OBJLoader();
+            objLoaderseven.setMaterials(materials);
+            objLoaderseven.setPath('obj/');
+            objLoaderseven.load('Wood_boat.obj', function (object) {
+                object.position.y = 0;
+                object.position.x = 300;
+                object.position.z = 900;     
                 scene.add(object);
             }, onProgress, onError);
         });
