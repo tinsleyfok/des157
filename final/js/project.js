@@ -273,10 +273,27 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoadertwo.load('grass.obj', function (object) {
                 object.position.y = -50;
                 object.position.x = -300;
-                object.position.z = -300;     
+                object.position.z = -400;     
                 scene.add(object);
             }, onProgress, onError);
         });
+        
+        
+              var mtlLoadertwo = new THREE.MTLLoader();
+        mtlLoaderthree.setPath('obj/');
+        mtlLoaderthree.load('submarine.mtl', function (materials) {
+            materials.preload();
+            var objLoadertwo = new THREE.OBJLoader();
+            objLoaderthree.setMaterials(materials);
+            objLoaderthree.setPath('obj/');
+            objLoaderthree.load('submarine.obj', function (object) {
+                object.position.y = 0;
+                object.position.x = 300;
+                object.position.z = -200;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
+        
         
         
         
