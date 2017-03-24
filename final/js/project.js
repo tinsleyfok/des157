@@ -281,12 +281,12 @@ document.addEventListener("DOMContentLoaded", function () {
         
               var mtlLoaderthree = new THREE.MTLLoader();
         mtlLoaderthree.setPath('obj/');
-        mtlLoaderthree.load('submarine.mtl', function (materials) {
+        mtlLoaderthree.load('Wood_Boat.mtl', function (materials) {
             materials.preload();
             var objLoaderthree = new THREE.OBJLoader();
             objLoaderthree.setMaterials(materials);
             objLoaderthree.setPath('obj/');
-            objLoaderthree.load('submarine.obj', function (object) {
+            objLoaderthree.load('Wood_Boat.obj', function (object) {
                 object.position.y = 0;
                 object.position.x = 700;
                 object.position.z = -700;     
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderfour.load('Barracuda2anim.obj', function (object) {
                 object.position.y = 0;
                 object.position.x = -100;
-                object.position.z = -100;     
+                object.position.z = -200;     
                 scene.add(object);
             }, onProgress, onError);
         });
