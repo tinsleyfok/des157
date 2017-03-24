@@ -288,22 +288,22 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderthree.setPath('obj/');
             objLoaderthree.load('submarine.obj', function (object) {
                 object.position.y = 0;
-                object.position.x = 300;
+                object.position.x = 700;
                 object.position.z = -700;     
                 scene.add(object);
             }, onProgress, onError);
         });
         
              var mtlLoaderfour = new THREE.MTLLoader();
-        mtlLoaderfour.setPath('obj/');
-        mtlLoaderfour.load('TropicalFish15.mtl', function (materials) {
+        mtlLoaderfour.setPath('obj/fish/Barracuda');
+        mtlLoaderfour.load('Barracuda2anim.mtl', function (materials) {
             materials.preload();
             var objLoaderfour = new THREE.OBJLoader();
             objLoaderfour.setMaterials(materials);
-            objLoaderfour.setPath('obj/');
-            objLoaderfour.load('TropicalFish15.obj', function (object) {
+            objLoaderfour.setPath('obj/fish/Barracuda');
+            objLoaderfour.load('Barracuda2anim.obj', function (object) {
                 object.position.y = 0;
-                object.position.x = 400;
+                object.position.x = -100;
                 object.position.z = -100;     
                 scene.add(object);
             }, onProgress, onError);
@@ -311,16 +311,16 @@ document.addEventListener("DOMContentLoaded", function () {
         
         
         var mtlLoaderfive = new THREE.MTLLoader();
-        mtlLoaderfive.setPath('obj/');
-        mtlLoaderfive.load('UnderTheSea.mtl', function (materials) {
+        mtlLoaderfive.setPath('obj/fish/BlueStarfish');
+        mtlLoaderfive.load('BluieStarfish.mtl', function (materials) {
             materials.preload();
             var objLoaderfour = new THREE.OBJLoader();
             objLoaderfive.setMaterials(materials);
-            objLoaderfive.setPath('obj/');
-            objLoaderfive.load('UnderTheSea.obj', function (object) {
+            objLoaderfive.setPath('obj/fish/BlueStarfish');
+            objLoaderfive.load('BluieStarfish.obj', function (object) {
                 object.position.y = 0;
                 object.position.x = -100;
-                object.position.z = -1000;     
+                object.position.z = -100;     
                 scene.add(object);
             }, onProgress, onError);
         });
