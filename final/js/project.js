@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         var onError = function (xhr) {};
         THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
-        var mtlLoader = new THREE.MTLLoader();
+        var mtlLoader1 = new THREE.MTLLoader();
         mtlLoader.setPath('obj/');
         mtlLoader.load('Shark.mtl', function (materials) {
             materials.preload();
@@ -260,6 +260,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 scene.add(object);
             }, onProgress, onError);
         });
+        
+        
+        var mtlLoader2 = new THREE.MTLLoader();
+        mtlLoader2.setPath('obj/');
+        mtlLoader2.load('grass.mtl', function (materials) {
+            materials.preload();
+            var objLoader2 = new THREE.OBJLoader();
+            objLoader2.setMaterials(materials);
+            objLoader2.setPath('obj/');
+            objLoader2.load('grass.obj', function (object) {
+                object.position.y = -50;
+                object.position.x = -300;
+                object.position.z = -300;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
+        
         
         
 
