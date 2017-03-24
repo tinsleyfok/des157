@@ -248,15 +248,15 @@ document.addEventListener("DOMContentLoaded", function () {
         THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
         var mtlLoader = new THREE.MTLLoader();
         mtlLoader.setPath('obj/');
-        mtlLoader.load('3dShark/Shark.mtl', function (materials) {
+        mtlLoader.load('Shark.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.setPath('obj/');
-            objLoader.load('3dShark/Shark.obj', function (object) {
+            objLoader.load('Shark.obj', function (object) {
                 object.position.y = 20;
-                object.position.x = -300;
-                object.position.z = -300;
+                object.position.x = 10;
+                object.position.z = 30;
                 
                 
                 
