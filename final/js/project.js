@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 controlsEnabled = true;
                 controls.enabled = true;
-
                 blocker.style.display = 'none';
 
             } else {
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 blocker.style.display = '-webkit-box';
                 blocker.style.display = '-moz-box';
-                blocker.style.display = 'box';
+                blocker.style.display = 'block';
 
                 instructions.style.display = '';
                 menu.style.display = '';
