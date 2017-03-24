@@ -248,12 +248,12 @@ document.addEventListener("DOMContentLoaded", function () {
         THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
         var mtlLoader = new THREE.MTLLoader();
         mtlLoader.setPath('obj/grass/');
-        mtlLoader.load('grass_low_poly.mtl', function (materials) {
+        mtlLoader.load('grass.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.setPath('obj/grass/');
-            objLoader.load('grass_low_poly.obj', function (object) {
+            objLoader.load('grass.obj', function (object) {
                 object.position.y = 1;
                 scene.add(object);
             }, onProgress, onError);
