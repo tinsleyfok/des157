@@ -244,15 +244,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(Math.round(percentComplete, 2) + '% downloaded');
             }
         };
-       
+        var onError = function (xhr) {};
+        THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setPath('obj/obj_Grass/');
+        mtlLoader.load('grass.mtl', function (materials) {
+            materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
-            objLoader.setPath('obj/');
-            objLoader.load('underwater_with_caustics.obj', function (object) {
+            objLoader.setPath('obj/obj_Grass/');
+            objLoader.load('Tgrass.obj', function (object) {
                 object.position.y = 5;
                 scene.add(object);
             }, onProgress, onError);
-    
+        });
 
 
         //
