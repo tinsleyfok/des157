@@ -279,11 +279,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         
         
-              var mtlLoadertwo = new THREE.MTLLoader();
+              var mtlLoaderthree = new THREE.MTLLoader();
         mtlLoaderthree.setPath('obj/');
         mtlLoaderthree.load('submarine.mtl', function (materials) {
             materials.preload();
-            var objLoadertwo = new THREE.OBJLoader();
+            var objLoaderthree = new THREE.OBJLoader();
             objLoaderthree.setMaterials(materials);
             objLoaderthree.setPath('obj/');
             objLoaderthree.load('submarine.obj', function (object) {
