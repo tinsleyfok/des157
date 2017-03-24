@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0, l = geometry.vertices.length; i < l; i++) {
             geometry.vertices[i].y = 35 * Math.sin(i / 2);
         }
-        var texture = new THREE.TextureLoader().load("../xx/ground.jpg");
+        var texture = new THREE.TextureLoader().load("../final/xx/ground.jpg");
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.repeat.set(5, 5);
         material = new THREE.MeshBasicMaterial({
