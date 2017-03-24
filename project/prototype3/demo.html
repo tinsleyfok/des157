@@ -458,13 +458,14 @@
         var shareclose = document.getElementById('share-close');
         var creditanwser = document.getElementById('credit-answer');
         var shareanswer = document.getElementById('share-answer');
-
+        var menu = document.getElementsByClassName('menu')
 
         about.addEventListener('click', function () {
             aboutanswer.style.display = "block";
             creditanwser.style.display = "none";
             shareanswer.style.display = "none";
             blocker.style.display = "none";
+            menu.style.display="none";
 
         })
 
@@ -486,16 +487,19 @@
 
         aboutclose.addEventListener('click', function () {
             aboutanswer.style.display = "none";
+             blocker.style.display = "block";
 
         })
 
         creditclose.addEventListener('click', function () {
             creditanwser.style.display = "none";
+             blocker.style.display = "block";
 
         })
 
         shareclose.addEventListener('click', function () {
             shareanswer.style.display = "none";
+             blocker.style.display = "block";
 
         })
 
