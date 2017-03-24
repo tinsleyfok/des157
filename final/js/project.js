@@ -294,6 +294,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }, onProgress, onError);
         });
         
+             var mtlLoaderfour = new THREE.MTLLoader();
+        mtlLoaderfour.setPath('obj/');
+        mtlLoaderfour.load('TropicalFish15.mtl', function (materials) {
+            materials.preload();
+            var objLoaderfour = new THREE.OBJLoader();
+            objLoaderfour.setMaterials(materials);
+            objLoaderfour.setPath('obj/');
+            objLoaderfour.load('TropicalFish15.obj', function (object) {
+                object.position.y = 0;
+                object.position.x = 300;
+                object.position.z = -100;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
+        
         
         
         
