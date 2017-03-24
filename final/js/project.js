@@ -247,14 +247,14 @@ document.addEventListener("DOMContentLoaded", function () {
         var onError = function (xhr) {};
         THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
         var mtlLoader = new THREE.MTLLoader();
-        mtlLoader.setPath('obj/grass/');
-        mtlLoader.load('grass.mtl', function (materials) {
+        mtlLoader.setPath('obj/TropicalFish_obj/');
+        mtlLoader.load('TropicalFish01.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
-            objLoader.setPath('obj/grass/');
-            objLoader.load('grass.obj', function (object) {
-                object.position.y = 1;
+            objLoader.setPath('obj/TropicalFish_obj/');
+            objLoader.load('TropicalFish01.obj', function (object) {
+                object.position.y = 5;
                 scene.add(object);
             }, onProgress, onError);
         });
