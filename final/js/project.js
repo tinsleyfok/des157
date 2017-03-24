@@ -257,7 +257,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 object.position.y = -50;
                 object.position.x = -1000;
                 object.position.z = 500;
-                object.repeat.set(100, 100);
                 scene.add(object);
             }, onProgress, onError);
         });
