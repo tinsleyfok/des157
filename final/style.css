@@ -37,10 +37,6 @@ body {
     transition: all 2.5s ease;
 }
 
-.fly-in-text li: last-child {
-    margin-right: 0;
-}
-
 .fly-in-text.hidden li {
     opacity: 0;
 }
@@ -285,7 +281,6 @@ button a {
     height: 100%;
     display: -webkit-box;
     display: -moz-box;
-    display: box;
     color: #ffffff;
     text-align: center;
     position: absolute;
@@ -315,10 +310,10 @@ button a {
 
 #menu a {
     text-decoration: none;
+    color:white;
 }
 
 #about,
-#credits,
 #share,
 #html,
 #css {
@@ -329,12 +324,11 @@ button a {
 }
 
 #about:hover,
-#credit:hover,
 #share:hover,
 #html:hover,
 #css:hover {
-    -webkit-animation: dubstep 1.3s infinite ease;
-    animation: dubstep 1.3s infinite ease;
+    -webkit-animation: dubstep 1.3s ease;
+    animation: dubstep 1.3s ease;
 }
 
 @-webkit-keyframes dubstep {
@@ -575,8 +569,7 @@ button a {
     color: white;
 }
 
-#about-answer,
-#credit-answer {
+#about-answer {
     position: absolute;
     height: auto;
     top: 35px;
@@ -589,8 +582,14 @@ button a {
     z-index: 99;
 }
 
-#credit-answer {
-    background-color: lightgoldenrodyellow;
+#about-answer img {
+    text-align: center;
+}
+
+#about-answer p {
+    text-align: center;
+    position: absolute;
+    left: 27%;
 }
 
 #share-answer {
@@ -608,7 +607,6 @@ button a {
 }
 
 #about-answer p,
-#credit-answer p,
 #share-answer p {
     position: relative;
     top: 40%;
@@ -617,8 +615,7 @@ button a {
     line-height: 150%;
 }
 
-#about-close,
-#credit-close {
+#about-close {
     height: 5%;
     width: 5%;
     position: fixed;
@@ -626,13 +623,12 @@ button a {
     right: 0%;
     cursor: pointer;
     font-size: 4em;
-    color:white;
+    color: white;
     display: none;
 }
 
 #about-close:hover #credit-close:hover {
     opacity: 0.6;
-
 }
 
 #share-close {
