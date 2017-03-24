@@ -303,12 +303,27 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderfour.setPath('obj/');
             objLoaderfour.load('TropicalFish15.obj', function (object) {
                 object.position.y = 0;
-                object.position.x = 300;
+                object.position.x = 400;
                 object.position.z = -100;     
                 scene.add(object);
             }, onProgress, onError);
         });
         
+        
+        var mtlLoaderfive = new THREE.MTLLoader();
+        mtlLoaderfive.setPath('obj/');
+        mtlLoaderfive.load('UnderTheSea.mtl', function (materials) {
+            materials.preload();
+            var objLoaderfour = new THREE.OBJLoader();
+            objLoaderfive.setMaterials(materials);
+            objLoaderfive.setPath('obj/');
+            objLoaderfive.load('UnderTheSea.obj', function (object) {
+                object.position.y = 0;
+                object.position.x = -100;
+                object.position.z = -1000;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
         
         
         
