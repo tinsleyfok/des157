@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.setPath('obj/obj_Grass/');
-            objLoader.load('Tgrass.obj', function (object) {
+            objLoader.load('grass.obj', function (object) {
                 object.position.y = 5;
                 scene.add(object);
             }, onProgress, onError);
