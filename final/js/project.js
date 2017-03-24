@@ -255,14 +255,13 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoader.setPath('obj/');
             objLoader.load('Shark.obj', function (object) {
                 object.position.y = 10;
-                object.position.x = -100;
-                object.position.z = -10;
-                
-                
-                
+                object.position.x = -10;
+                object.position.z = -20;     
                 scene.add(object);
             }, onProgress, onError);
         });
+        
+        
 
 
         //
