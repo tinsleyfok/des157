@@ -244,9 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(Math.round(percentComplete, 2) + '% downloaded');
             }
         };
-        var onError = function (xhr) {};
-        THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
-     
+       
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.setPath('obj/');
@@ -254,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 object.position.y = 5;
                 scene.add(object);
             }, onProgress, onError);
-        });
+    
 
 
         //
