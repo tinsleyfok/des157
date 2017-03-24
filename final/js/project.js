@@ -237,29 +237,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // objects
-        var manager = new THREE.LoadingManager();
-				manager.onProgress = function( item, loaded, total ) {
-					console.log( item, loaded, total );
-				};
-				var onProgress = function( xhr ) {
-					if ( xhr.lengthComputable ) {
-						var percentComplete = xhr.loaded / xhr.total * 100;
-						console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
-					}
-				};
-				var onError = function( xhr ) {
-				};
-        var loader = new THREE.FBXLoader(manager);
-        loader.load('js/xsi_man_skinning.fbx', function (object) {
-            object.mixer = new THREE.AnimationMixer(object);
-            mixers.push(object.mixer);
-            var action = object.mixer.clipAction(object.animations[0]);
-            action.play();
-            scene.add(object);
-        }, onProgress, onError);
-        loader.load('js/nurbs.fbx', function (object) {
-            scene.add(object);
-        }, onProgress, onError);
+
+        var onProgress = function (xhr) {
+            if (xhr.lengthComputable) {
+                var percentComplete = xhr.loaded / xhr.total * 100;
+                console.log(Math.round(percentComplete, 2) + '% downloaded');
+            }
+        };
+        var onError = function (xhr) {};
+        THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setPath('obj/male02/');
+        mtlLoader.load('male02_dds.mtl', function (materials) {
+            materials.preload();
+            var objLoader = new THREE.OBJLoader();
+            objLoader.setMaterials(materials);
+            objLoader.setPath('obj/male02/');
+            objLoader.load('male02.obj', function (object) {
+                object.position.y = -95;
+                scene.add(object);
+            }, onProgress, onError);
+        });
 
 
         //
