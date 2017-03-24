@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoader.setMaterials(materials);
             objLoader.setPath('obj/obj_Grass/');
             objLoader.load('grass.obj', function (object) {
-                object.position.y = 0;
+                object.position.y = -10;
                 scene.add(object);
             }, onProgress, onError);
         });
