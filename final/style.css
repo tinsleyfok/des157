@@ -627,7 +627,7 @@ button a {
     display: none;
 }
 
-#about-close:hover #credit-close:hover {
+#about-close:hover {
     opacity: 0.6;
 }
 
