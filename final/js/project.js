@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderseven.load('Wood_boat.obj', function (object) {
                 object.position.y = 0;
                 object.position.x = 300;
-                object.position.z = 900;     
+                object.position.z = -900;     
                 scene.add(object);
             }, onProgress, onError);
         });
