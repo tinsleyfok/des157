@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoader.setMaterials(materials);
             objLoader.setPath('obj/');
             objLoader.load('3dShark/Shark.obj', function (object) {
-                object.position.y = -50;
+                object.position.y = 20;
                 object.position.x = -300;
                 object.position.z = -300;
                 
