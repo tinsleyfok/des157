@@ -281,12 +281,12 @@ document.addEventListener("DOMContentLoaded", function () {
         
               var mtlLoaderthree = new THREE.MTLLoader();
         mtlLoaderthree.setPath('obj/');
-        mtlLoaderthree.load('Wood_Boat.mtl', function (materials) {
+        mtlLoaderthree.load('submarine.mtl', function (materials) {
             materials.preload();
             var objLoaderthree = new THREE.OBJLoader();
             objLoaderthree.setMaterials(materials);
             objLoaderthree.setPath('obj/');
-            objLoaderthree.load('Wood_Boat.obj', function (object) {
+            objLoaderthree.load('submarine.obj', function (object) {
                 object.position.y = 0;
                 object.position.x = 700;
                 object.position.z = -700;     
@@ -303,8 +303,8 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderfour.setPath('obj/fish/Barracuda');
             objLoaderfour.load('Barracuda2anim.obj', function (object) {
                 object.position.y = 0;
-                object.position.x = -100;
-                object.position.z = -200;     
+                object.position.x = -10;
+                object.position.z = -20;     
                 scene.add(object);
             }, onProgress, onError);
         });
@@ -319,13 +319,26 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderfive.setPath('obj/fish/BlueStarfish');
             objLoaderfive.load('BluieStarfish.obj', function (object) {
                 object.position.y = 0;
-                object.position.x = -100;
-                object.position.z = -100;     
+                object.position.x = -10;
+                object.position.z = -10;     
                 scene.add(object);
             }, onProgress, onError);
         });
         
-        
+          var mtlLoadersix = new THREE.MTLLoader();
+        mtlLoadersix.setPath('obj/');
+        mtlLoadersix.load('grass.mtl', function (materials) {
+            materials.preload();
+            var objLoadersix = new THREE.OBJLoader();
+            objLoadersix.setMaterials(materials);
+            objLoadersix.setPath('obj/');
+            objLoadersix.load('grass.obj', function (object) {
+                object.position.y = -50;
+                object.position.x = 300;
+                object.position.z = 400;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
         
 
 
