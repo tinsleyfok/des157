@@ -295,12 +295,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         
              var mtlLoaderfour = new THREE.MTLLoader();
-        mtlLoaderfour.setPath('obj/fish/Barracuda/');
+        mtlLoaderfour.setPath('obj/');
         mtlLoaderfour.load('Barracuda2anim.mtl', function (materials) {
             materials.preload();
             var objLoaderfour = new THREE.OBJLoader();
             objLoaderfour.setMaterials(materials);
-            objLoaderfour.setPath('obj/fish/Barracuda/');
+            objLoaderfour.setPath('obj/');
             objLoaderfour.load('Barracuda2anim.obj', function (object) {
                 object.position.y = 10;
                 object.position.x = -10;
@@ -342,12 +342,12 @@ document.addEventListener("DOMContentLoaded", function () {
         
            var mtlLoaderseven = new THREE.MTLLoader();
         mtlLoaderseven.setPath('obj/');
-        mtlLoaderseven.load('Wood_boat.mtl', function (materials) {
+        mtlLoaderseven.load('Wood_Boat.mtl', function (materials) {
             materials.preload();
             var objLoaderseven = new THREE.OBJLoader();
             objLoaderseven.setMaterials(materials);
             objLoaderseven.setPath('obj/');
-            objLoaderseven.load('Wood_boat.obj', function (object) {
+            objLoaderseven.load('Wood_Boat.obj', function (object) {
                 object.position.y = 0;
                 object.position.x = 300;
                 object.position.z = -900;     
@@ -355,7 +355,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }, onProgress, onError);
         });
         
-
+        var mtlLoadereight = new THREE.MTLLoader();
+        mtlLoadereight.setPath('obj/');
+        mtlLoadereight.load('Shark.mtl', function (materials) {
+            materials.preload();
+            var objLoadereight = new THREE.OBJLoader();
+            objLoadereight.setMaterials(materials);
+            objLoadereight.setPath('obj/');
+            objLoadereight.load('Shark.obj', function (object) {
+                object.position.y = 10;
+                object.position.x = -100;
+                object.position.z = -200;     
+                scene.add(object);
+            }, onProgress, onError);
+        });
+        
 
         //
 
