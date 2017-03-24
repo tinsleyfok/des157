@@ -571,7 +571,7 @@ button a {
     color: white;
 }
 
-#about-answer {
+#about-answer,#credit-answer {
     position: absolute;
     height: auto;
     top: 35px;
@@ -617,7 +617,7 @@ button a {
     line-height: 150%;
 }
 
-#about-close {
+#about-close,credit-close {
     height: 5%;
     width: 5%;
     position: fixed;
@@ -631,6 +631,7 @@ button a {
 
 #about-close:hover {
     opacity: 0.6;
+    transition: 0.3 ease;
 }
 
 #share-close {
