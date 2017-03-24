@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoader.setMaterials(materials);
             objLoader.setPath('obj/shells_obj/');
             objLoader.load('nautilus_shell.obj', function (object) {
-                object.position.y = -95;
+                object.position.y = 30;
                 scene.add(object);
             }, onProgress, onError);
         });
