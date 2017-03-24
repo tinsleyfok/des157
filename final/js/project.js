@@ -247,13 +247,13 @@ document.addEventListener("DOMContentLoaded", function () {
         var onError = function (xhr) {};
         THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
         var mtlLoader = new THREE.MTLLoader();
-        mtlLoader.setPath('obj/male02/');
-        mtlLoader.load('male02_dds.mtl', function (materials) {
+        mtlLoader.setPath('obj/shells_obj/');
+        mtlLoader.load('nautilus_shell.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
-            objLoader.setPath('obj/male02/');
-            objLoader.load('male02.obj', function (object) {
+            objLoader.setPath('obj/shells_obj/');
+            objLoader.load('nautilus_shell.obj', function (object) {
                 object.position.y = -95;
                 scene.add(object);
             }, onProgress, onError);
