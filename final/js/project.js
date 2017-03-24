@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
             objLoaderthree.load('submarine.obj', function (object) {
                 object.position.y = 0;
                 object.position.x = 300;
-                object.position.z = -200;     
+                object.position.z = -700;     
                 scene.add(object);
             }, onProgress, onError);
         });
