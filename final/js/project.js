@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // objects
 	var loader = new THREE.JSONLoader();
-				loader.load( 'flamingo.js', function( geometry ) {
+				loader.load( 'js/flamingo.js', function( geometry ) {
 					var material = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0xffffff, shininess: 20, morphTargets: true, vertexColors: THREE.FaceColors, shading: THREE.FlatShading } );
 					var mesh = new THREE.Mesh( geometry, material );
 					var s = 0.35;
