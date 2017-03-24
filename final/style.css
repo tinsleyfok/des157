@@ -319,8 +319,8 @@ button a {
 #css {
     font-size: 1em;
     cursor: pointer;
-    -webkit-animation: dubstep 0.8572 2 ease;
-    animation: dubstep 0.8572 2 ease;
+    -webkit-animation: dubstep 0.9  ease;
+    animation: dubstep 0.9  ease;
 }
 
 #about:hover,
@@ -331,7 +331,7 @@ button a {
     animation: dubstep 1.3s ease;
 }
 
-@-webkit-keyframes dubstep {
+@keyframes dubstep {
     0% {
         text-shadow: 0 0 0 #fff;
     }
