@@ -314,6 +314,7 @@ button a {
 }
 
 #about,
+#credit,
 #share,
 #html,
 #css {
@@ -324,6 +325,7 @@ button a {
 }
 
 #about:hover,
+#credit:hover,
 #share:hover,
 #html:hover,
 #css:hover {
